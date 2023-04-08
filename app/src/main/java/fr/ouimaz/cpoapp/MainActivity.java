@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
         ImageView logoImageView = findViewById(R.id.login_page_logo);
         ConstraintLayout constraintlayout = findViewById(R.id.login_page_constraintlayout);
 
-        logoImageView.setOnClickListener(v -> Utils.hideKeyboard( context,  v));
-        constraintlayout.setOnClickListener(v -> Utils.hideKeyboard( context,  v));
+        logoImageView.setOnClickListener(v -> Utils.hideKeyboard(context, v));
+        constraintlayout.setOnClickListener(v -> Utils.hideKeyboard(context, v));
     }
 
     public void homepage_login(View view) {
