@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Cpoapp</string>
+    <string name="login_page_view_username">Username</string>
+    <string name="login_page_view_password">Password</string>
+    <string name="login_page_view_login">Login</string>
+    <string name="login_page_view_don_t_have_an_account_sign_up_here">Don\'t have an account?  <u>Sign up here.</u></string>
+    <string name="login_page_logo_content_description">logo of cpoapp</string>
 </resources>
