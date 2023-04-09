@@ -35,7 +35,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/signup_page_first_name_edit_text"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -53,7 +53,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/signup_page_last_name_edit_text"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -162,7 +162,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/signup_page_dob_edit_text"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -180,7 +180,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/signup_page_gender_edit_text"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -198,7 +198,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/signup_page_phone_edit_text"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -217,7 +217,7 @@
                         android:id="@+id/signup_page_street"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textPostalAddress"/>
+                        android:inputType="textPostalAddress" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -235,7 +235,7 @@
                         android:id="@+id/signup_page_city"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="text"/>
+                        android:inputType="text" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -271,7 +271,7 @@
                         android:id="@+id/signup_page_country"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="text"/>
+                        android:inputType="text" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -290,7 +290,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="number"
-                        android:maxLength="6"/>
+                        android:maxLength="6" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -302,18 +302,18 @@
                     android:id="@+id/signup_page_terms_checkbox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/signup_terms_and_conditions_text"
-                    android:textColor="@color/black"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/signup_page_password_input_layout"
-                    app:layout_constraintBottom_toTopOf="@id/signup_page_button_sign_up"
-                    app:layout_constraintVertical_chainStyle="packed"
-                    app:layout_constraintHorizontal_bias="0.0"
                     android:checked="false"
                     android:padding="8dp"
-                    app:theme="@style/CustomCheckboxStyle"
+                    android:text="@string/signup_terms_and_conditions_text"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
                     android:theme="@style/CustomCheckboxStyle"
-                    android:textSize="16sp"/>
+                    app:layout_constraintBottom_toTopOf="@id/signup_page_button_sign_up"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/signup_page_password_input_layout"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    app:theme="@style/CustomCheckboxStyle" />
 
                 <!-- Sign up button -->
                 <com.google.android.material.button.MaterialButton
