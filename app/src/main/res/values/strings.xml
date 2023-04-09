@@ -15,4 +15,17 @@
     <string name="signup_page_password_hint">Password</string>
     <string name="signup_page_email_hint">Email</string>
     <string name="signup_page_name_hint">Name</string>
+    <string name="signup_terms_and_conditions_text">terms and conditions</string>
+    <string name="signup_page_first_name">First Name</string>
+    <string name="signup_page_last_name">Last Name</string>
+    <string name="signup_page_date_of_birth">Date of Birth</string>
+    <string name="signup_page_gender">Gender</string>
+    <string name="signup_page_phone_number">Phone Number</string>
+    <string name="signup_page_address_hint">Address</string>
+    <string name="signup_page_street_hint">Street</string>
+    <string name="signup_page_city_hint">City</string>
+    <string name="signup_page_state_hint">State</string>
+    <string name="signup_page_country_hint">Country</string>
+    <string name="signup_page_zip_hint">Zip</string>
+
 </resources>

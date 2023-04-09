@@ -25,6 +25,41 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="16dp">
+                <!-- First Name -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/signup_page_first_name_input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/signup_page_first_name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/signup_page_first_name_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/recommended_size_between_views" />
+
+                <!-- Last Name -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/signup_page_last_name_input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/signup_page_last_name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/signup_page_last_name_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/recommended_size_between_views" />
 
                 <!-- Name input -->
                 <com.google.android.material.textfield.TextInputLayout
@@ -45,7 +80,6 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
-
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/recommended_size_between_views" />
@@ -53,7 +87,7 @@
                 <!-- Email input -->
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/signup_page_email_input_layout"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/signup_page_email_hint">
 
@@ -79,7 +113,7 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/signup_page_edit_text_password"
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textPassword"
                         android:maxLines="1"
@@ -89,7 +123,6 @@
                         app:layout_constraintWidth_percent="0.9" />
 
                 </com.google.android.material.textfield.TextInputLayout>
-
 
                 <View
                     android:layout_width="match_parent"
@@ -104,21 +137,188 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/signup_page_edit_text_confirm_password"
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
                         android:inputType="textPassword"
                         android:maxLines="1"
-                        app:layout_constraintWidth_default="wrap"
-                        app:layout_constraintWidth_max="488dp" />
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintWidth_max="488dp"
+                        app:layout_constraintWidth_percent="0.9" />
 
                 </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/recommended_size_between_views" />
+
+                <!-- Date of Birth -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/signup_page_dob_input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/signup_page_date_of_birth">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/signup_page_dob_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/recommended_size_between_views" />
+
+                <!-- Gender -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/signup_page_gender_input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/signup_page_gender">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/signup_page_gender_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/recommended_size_between_views" />
+
+                <!-- Phone Number -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/signup_page_phone_input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/signup_page_phone_number">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/signup_page_phone_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/recommended_size_between_views" />
+
+                <!-- Address fields -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/signup_page_address_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/signup_page_address_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/signup_page_street"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPostalAddress"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/recommended_size_between_views" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/signup_page_city_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/signup_page_city_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/signup_page_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/recommended_size_between_views" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/signup_page_state_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/signup_page_state_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/signup_page_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/recommended_size_between_views" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/signup_page_country_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/signup_page_country_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/signup_page_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/recommended_size_between_views" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/signup_page_zip_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/signup_page_zip_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/signup_page_zip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="6"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/recommended_size_between_views" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/signup_page_terms_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/signup_terms_and_conditions_text"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/signup_page_password_input_layout"
+                    app:layout_constraintBottom_toTopOf="@id/signup_page_button_sign_up"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    android:checked="false"
+                    android:padding="8dp"
+                    app:theme="@style/CustomCheckboxStyle"
+                    android:theme="@style/CustomCheckboxStyle"
+                    android:textSize="16sp"/>
 
                 <!-- Sign up button -->
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/signup_page_button_sign_up"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:text="@string/signup_page_sign_up_button"
@@ -127,12 +327,10 @@
                     app:layout_constraintTop_toBottomOf="@id/signup_page_edit_text_confirm_password"
                     app:layout_constraintWidth_max="320dp" />
 
-
             </LinearLayout>
         </ScrollView>
 
         <!-- Link to login screen -->
-
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/signup_page_text"
             android:layout_width="match_parent"
@@ -147,8 +345,6 @@
             android:textColor="?attr/colorPrimary"
             android:textSize="16sp" />
 
-
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
