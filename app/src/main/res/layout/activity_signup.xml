@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignupActivity">
+
+    <LinearLayout
+        android:id="@+id/signup_page_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Sign up form -->
+        <ScrollView
+            android:id="@+id/signup_page_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/signup_page_form_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Name input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/signup_page_name_input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/signup_page_name_hint"
+                    app:layout_constraintWidth_max="488dp"
+                    app:layout_constraintWidth_percent="0.9">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/signup_page_edit_text_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:textColor="@android:color/black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/recommended_size_between_views" />
+
+                <!-- Email input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/signup_page_email_input_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/signup_page_email_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/signup_page_edit_text_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/recommended_size_between_views" />
+
+                <!-- Password input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/signup_page_password_input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/signup_page_password_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/signup_page_edit_text_password"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintWidth_max="488dp"
+                        app:layout_constraintWidth_percent="0.9" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/recommended_size_between_views" />
+
+                <!-- Confirm password input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/signup_page_confirm_password_input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/signup_page_confirm_password_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/signup_page_edit_text_confirm_password"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        app:layout_constraintWidth_default="wrap"
+                        app:layout_constraintWidth_max="488dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Sign up button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/signup_page_button_sign_up"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/signup_page_sign_up_button"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/signup_page_edit_text_confirm_password"
+                    app:layout_constraintWidth_max="320dp" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Link to login screen -->
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/signup_page_text"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="16dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_horizontal"
+            android:onClick="homepage_signup"
+            android:text="@string/signup_page_already_have_an_account"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
