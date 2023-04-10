@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
             public void done(ParseUser user, ParseException e) {
                 if (user != null) {
                     // Login successful
+                    Log.i("cpoapp","Login successful");
                     // You can perform actions such as starting a new activity or displaying a toast message here
                     // Assume the user has successfully logged in
                     saveLoginState(context, true);
@@ -68,9 +69,9 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                     // Finish the LoginActivity so that the user cannot navigate back to it using the back button
                     finish();
-
                 } else {
                     // Login failed
+                    Log.i("cpoapp","Login failed");
                     Toast.makeText(context, "Login failed. Please check your username and password and try again.", Toast.LENGTH_LONG).show();
                 }
             }
@@ -78,9 +79,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void homepage_signup(View view) {
+        Log.i("cpoapp","Go from login page to signup page");
         Intent intent = new Intent(this, SignupActivity.class);
         startActivity(intent);
     }
-
-
 }

@@ -29,13 +29,13 @@ public class SignupActivity extends AppCompatActivity {
     Context context;
     private static final String DATE_FORMAT = "dd/MM/yyyy";
     private static final Locale LOCALE = Locale.getDefault();
-    private static final Pattern STREET_PATTERN = Pattern.compile("^\\d+\\s[A-z]+\\s[A-z]+");
-    private static final Pattern CITY_PATTERN = Pattern.compile("^[a-zA-Z]+(?:[\\s-][a-zA-Z]+)*$");
-    private static final Pattern STATE_PATTERN = Pattern.compile("^([A-Za-z]{2})$|^([A-Za-z]+(?:\\s[A-Za-z]+)*)$");
-    private static final Pattern COUNTRY_PATTERN = Pattern.compile("^[A-Za-z\\s]+$");
-    private static final Pattern ZIP_PATTERN = Pattern.compile("^[0-9]{5}(?:-[0-9]{4})?$");
+    private static final Pattern STREET_PATTERN = Pattern.compile("^\\d+\\s[A-z]+[\\s'A-z]*\\s+[\\dA-z]*");
+    private static final Pattern CITY_PATTERN = Pattern.compile("^[a-zA-Z]+(?:['\\s-][a-zA-Z]+)*$");
+    private static final Pattern STATE_PATTERN = Pattern.compile("^([A-Za-z]{2})$|^([A-Za-z]+(?:\\s[A-Za-z']+)*$)");
+    private static final Pattern COUNTRY_PATTERN = Pattern.compile("^[A-Za-z\\s'é]+$");
+    private static final Pattern ZIP_PATTERN = Pattern.compile("^[0-9A-Za-z-\\/\\s]+$");
 
-    private String firstname, lastname, username, email, password, passwordConfirm, dateOfBirth, gender, street, city, state, country, zip;
+    private String firstname = "", lastname = "", username = "", email = "", password = "", passwordConfirm = "", dateOfBirth = "", gender = "", street = "", city = "", state = "", country = "", zip = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +53,10 @@ public class SignupActivity extends AppCompatActivity {
     public void signup(View view) {
 
         if (!allFieldsAreTheyValid()) return;
+        if (!is18YearsOld(dateOfBirth)){
+            toastInvalidField("You should be 18 years old at least");
+            return;
+        }
 
         ParseUser user = new ParseUser();
         user.setUsername(username);
@@ -74,7 +78,7 @@ public class SignupActivity extends AppCompatActivity {
                 if (e == null) {
                     // Sign up successful
 
-                    Intent intent = new Intent(context, MainActivity.class);
+                    Intent intent = new Intent(context, HomeActivity.class);
                     startActivity(intent);
                     finish();
                 } else {
@@ -301,6 +305,24 @@ public class SignupActivity extends AppCompatActivity {
 
     public void toastInvalidField(String msg) {
         Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
+    }
+
+    public static boolean is18YearsOld(String dateOfBirth) {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+        Calendar dob = Calendar.getInstance();
+        try {
+            dob.setTime(sdf.parse(dateOfBirth));
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        // Add 18 years to the date of birth
+        dob.add(Calendar.YEAR, 18);
+        Calendar today = Calendar.getInstance();
+
+        // Compare today's date with the calculated date of 18 years old
+        return today.after(dob);
     }
 
 }
