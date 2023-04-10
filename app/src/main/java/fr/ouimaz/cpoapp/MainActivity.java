@@ -48,11 +48,10 @@ public class MainActivity extends AppCompatActivity {
     public void homepage_login(View view) {
 
         EditText edt_login = findViewById(R.id.edt_logpage_username);
-        EditText edt_password = findViewById(R.id.edt_logpage_password);
-
         String username = edt_login.getText().toString();
         if (!isValidUsername(username,context)) return;
 
+        EditText edt_password = findViewById(R.id.edt_logpage_password);
         String password = edt_password.getText().toString();
         if (!isValidPassword(password, context)) return;
 

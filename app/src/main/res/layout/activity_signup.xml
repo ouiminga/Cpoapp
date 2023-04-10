@@ -162,7 +162,11 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/signup_page_dob_edit_text"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:inputType="none"
+                        android:onClick="showDatePickerDialog" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -177,10 +181,32 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/signup_page_gender">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/signup_page_gender_edit_text"
+                    <RadioGroup
+                        android:id="@+id/signup_page_gender_radio_group"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/signup_page_male_radio_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="@string/signup_page_male" />
+
+                        <RadioButton
+                            android:id="@+id/signup_page_female_radio_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/signup_page_female" />
+
+                        <RadioButton
+                            android:id="@+id/signup_page_not_indicated_radio_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/signup_page_not_indicated" />
+
+                    </RadioGroup>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -188,20 +214,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/recommended_size_between_views" />
 
-                <!-- Phone Number -->
+                <!-- Phone Number
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/signup_page_phone_input_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/signup_page_phone_number">
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <com.google.android.material.textfield.PhoneNumberEditText
                         android:id="@+id/signup_page_phone_edit_text"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:hint="@string/signup_page_phone_number_hint" />
 
                 </com.google.android.material.textfield.TextInputLayout>
-
+                -->
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/recommended_size_between_views" />
@@ -321,6 +349,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:onClick="signup"
                     android:text="@string/signup_page_sign_up_button"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -340,9 +369,8 @@
             android:clickable="true"
             android:focusable="true"
             android:gravity="center_horizontal"
-            android:onClick="homepage_signup"
+            android:onClick="signupPageGoTohomepage"
             android:text="@string/signup_page_already_have_an_account"
-            android:textColor="?attr/colorPrimary"
             android:textSize="16sp" />
 
     </LinearLayout>

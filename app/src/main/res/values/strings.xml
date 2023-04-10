@@ -9,7 +9,7 @@
     <string name="back4app_app_id">ExU4WefkbLX1yLrYdPYYxHgvyu9HNfDKTTtl02h4</string>
     <string name="back4app_client_key">gPgt93UTbbRBdy3hLG6d7C7NrW5UjCXRDoSrSJDr</string>
 
-    <string name="signup_page_already_have_an_account">You already have an account ? Click here.</string>
+    <string name="signup_page_already_have_an_account">You already have an account ? <u>Click here.</u></string>
     <string name="signup_page_sign_up_button">Signup</string>
     <string name="signup_page_confirm_password_hint">Confirm password</string>
     <string name="signup_page_password_hint">Password</string>
@@ -27,5 +27,9 @@
     <string name="signup_page_state_hint">State</string>
     <string name="signup_page_country_hint">Country</string>
     <string name="signup_page_zip_hint">Zip</string>
+    <string name="signup_page_male">Mâle</string>
+    <string name="signup_page_female">Female</string>
+    <string name="signup_page_not_indicated">Not indicated</string>
+    <string name="signup_page_phone_number_hint">0022670123456</string>
 
 </resources>

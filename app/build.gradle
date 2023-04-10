@@ -39,4 +39,7 @@ dependencies {
 
     implementation "com.github.parse-community.Parse-SDK-Android:parse:4.2.0"
 
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.12.26'
+
+    implementation 'com.google.android.material:material:1.8.0'
 }
